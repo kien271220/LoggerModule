@@ -32,29 +32,13 @@ LoggerModule/
 │        └── TaskManager.h
 ```
 
----
-
-## ⚙️ Build Instructions (CMake)
-
-### Requirements:
-- CMake ≥ 3.5
-- C++11 compatible compiler (e.g., GCC, Clang, MSVC)
-
-### Steps:
-
-```bash
+# 1. Build Instruction (CMake)
 git clone https://github.com/kien271220/LoggerModule.git
 cd LoggerModule
 mkdir build && cd build
 cmake ..
 cmake --build .
 
----
-
-## 🚀 Run
-
-Navigate to `LoggerModule/build/`  
-Run the binary:
-
----
-
+# 2. Run
+Navigate to LoggerModule/Debug/
+Run the binary

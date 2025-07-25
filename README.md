@@ -1,7 +1,7 @@
 # LoggerModule
 
 ## 📁 Project Structure
-
+``` bash
 LoggerModule/
 ├── src/
 │   ├── ConsoleLogger.cpp
@@ -29,7 +29,7 @@ LoggerModule/
 │   ├── TaskManager/
 │        ├── TaskManager.cpp
 │        └── TaskManager.h
-
+```
 ---
 
 ## ⚙️ Build Instructions (CMake)

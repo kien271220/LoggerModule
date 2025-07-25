@@ -1,6 +1,7 @@
 # LoggerModule
 
 ## 📁 Project Structure
+
 ``` bash
 LoggerModule/
 ├── src/
@@ -30,6 +31,7 @@ LoggerModule/
 │        ├── TaskManager.cpp
 │        └── TaskManager.h
 ```
+
 ---
 
 ## ⚙️ Build Instructions (CMake)
@@ -49,7 +51,10 @@ cmake --build .
 
 ---
 
-## 🚀 Run:
-Navigate to LoggerModule/build/
-Run main.exe
+## 🚀 Run
+
+Navigate to `LoggerModule/build/`  
+Run the binary:
+
+---
 

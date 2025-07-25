@@ -40,5 +40,5 @@ LoggerModule/
 - cmake --build .
 
 # 2. Run
-Navigate to LoggerModule/Debug/
-Run the binary
+- Navigate to LoggerModule/build/Debug/
+- Run the binary

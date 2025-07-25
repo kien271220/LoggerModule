@@ -33,11 +33,11 @@ LoggerModule/
 ```
 
 # 1. Build Instruction (CMake)
-git clone https://github.com/kien271220/LoggerModule.git
-cd LoggerModule
-mkdir build && cd build
-cmake ..
-cmake --build .
+- git clone https://github.com/kien271220/LoggerModule.git
+- cd LoggerModule
+- mkdir build && cd build
+- cmake ..
+- cmake --build .
 
 # 2. Run
 Navigate to LoggerModule/Debug/

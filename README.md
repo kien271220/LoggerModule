@@ -40,5 +40,5 @@ LoggerModule/
 - cmake --build .
 
 # 2. Run
-- Navigate to LoggerModule/build/Debug/
-- Run the binary
+- For Windows: Navigate to LoggerModule/build/Debug/ and run main.exe
+- For Linux: Navigate to build/Debug/ and run main

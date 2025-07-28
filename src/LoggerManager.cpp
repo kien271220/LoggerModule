@@ -3,8 +3,10 @@
 #include "LoggerManager.h"
 #include <iostream>
 #include <cstdarg>
+#include <cstring>
 /////////////////////////////////////////////////
 // PREPROCESSOR
+
 
 /////////////////////////////////////////////////
 // DEFINE
@@ -235,7 +237,11 @@ int LoggerManager::log(log_level_t level, uint8_t logType, const char* fmt, va_l
         ptr = (char*)dataItem.buff;
         sz = dataItem.size;
         curTime = std::time(nullptr);
-        localtime_s(&curTm, &curTime);
+        #ifdef _WIN32
+            localtime_s(&curTm, &curTime);
+        #else
+            localtime_r(&curTime, &curTm);
+        #endif
         len = std::strftime(ptr, sz, "%Y/%m/%d %H:%M:%S ", &curTm);
         tmpLen = snprintf(ptr + len, sz - len, "%s ", LoggerManager::logLevel2String(level));
         if (tmpLen <= 0)

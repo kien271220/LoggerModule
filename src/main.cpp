@@ -15,7 +15,7 @@ int main() {
     cfg.log_cfgs.level = LOG_LEVEL_VERBOSE;
     cfg.log_cfgs.configs[0].type = LOG_TYPE_CONSOLE;
     cfg.log_cfgs.configs[1].type = LOG_TYPE_FILE;
-    cfg.log_cfgs.configs[1].cfgs.file.log_dir = "log/";
+    cfg.log_cfgs.configs[1].cfgs.file.log_dir = NULL;
 
     do {
         ret = LOG_MGR.init(&cfg);

@@ -3,6 +3,7 @@
 #include "LogTask.h"
 #include "LoggerManager.h"
 #include <iostream>
+#include <cstring>
 /////////////////////////////////////////////////
 // PREPROCESSOR
 

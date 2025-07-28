@@ -3,6 +3,8 @@
 /////////////////////////////////////////////////
 // INCLUDE
 #include "../DataManager/DataManager.h"
+#include <condition_variable>
+#include <mutex>
 /////////////////////////////////////////////////
 // PREPROCESSOR
 
@@ -91,11 +93,11 @@ public:
     event_item_t                get(void);
     int                         release(event_item_t* item);
     int                         notify(event_id_t eventId, event_item_t* eventItem);
-    event_item_t				waitForItem(unsigned int waitMs = EVENT_MANAGER_MAX_WAIT_TIME); // ms
-    int							notify(event_id_t eventId, event_size_t eventSize, unsigned char* eventData);
+    event_item_t                waitForItem(unsigned int waitMs = EVENT_MANAGER_MAX_WAIT_TIME); // ms
+    int                         notify(event_id_t eventId, event_size_t eventSize, unsigned char* eventData);
 
 protected:
-    std::mutex					event_Key;
+    std::mutex			event_Key;
     std::condition_variable     event_Locker;
 };
 #endif

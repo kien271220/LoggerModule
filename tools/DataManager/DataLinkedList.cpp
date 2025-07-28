@@ -2,6 +2,7 @@
 // INCLUDE
 #include "DataLinkedList.h"
 #include <iostream>
+#include <cstring>
 /////////////////////////////////////////////////
 // PREPROCESSOR
 

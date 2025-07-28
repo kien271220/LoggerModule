@@ -66,6 +66,6 @@ protected:
     void                proc(void) override;
     int                 onLog(uint8_t logType, data_item_t* dataItem);				// for only 1 main task
 protected:
-    Logger** logger_List;
+    Logger**            logger_List;
 };
 #endif

@@ -66,29 +66,29 @@ class DataLinkedList
 {
 public:
     DataLinkedList(void);
-    virtual		~DataLinkedList(void);
-    int			init(uint8_t queueSize, uint8_t itemSize);
-    void		deinit(void);
-    bool		isValid();
-    bool		isEmpty();
-    uint8_t		size();
-    int			deQueue(data_item_t* data);
-    int			enQueue(data_item_t* data);
-    int			remove(data_item_t* data);
-    bool		isFull();
+    virtual		        ~DataLinkedList(void);
+    int			        init(uint8_t queueSize, uint8_t itemSize);
+    void		        deinit(void);
+    bool		        isValid();
+    bool		        isEmpty();
+    uint8_t		        size();
+    int			        deQueue(data_item_t* data);
+    int			        enQueue(data_item_t* data);
+    int			        remove(data_item_t* data);
+    bool		        isFull();
 
 protected:
-    LinkedNode* getAvailableSlot(void);
+    LinkedNode*         getAvailableSlot(void);
 
 protected:
-    std::mutex	data_Locker;
+    std::mutex	        data_Locker;
 
-    uint8_t		queue_Size;
-    uint8_t		queue_Count;
+    uint8_t             queue_Size;
+    uint8_t             queue_Count;
 
-    LinkedNode* head;
-    LinkedNode* tail;
-    LinkedNode* data_Item;
+    LinkedNode*         head;
+    LinkedNode* 	    tail;
+    LinkedNode* 	    data_Item;
 };
 
 #endif

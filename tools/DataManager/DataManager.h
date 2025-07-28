@@ -43,14 +43,14 @@ class DataManager
 public:
     DataManager(void);
     virtual ~DataManager(void);
-    virtual bool                                                isValid(void);
-    virtual int                                                 init(uint8_t queueSize, uint8_t itemSize);
-    virtual void                                                deinit(void);
-    int															releaseAll(void);
-    data_item_t                                                 get(void);
-    int                                                         release(data_item_t* item);
+    virtual bool                                            isValid(void);
+    virtual int                                             init(uint8_t queueSize, uint8_t itemSize);
+    virtual void                                            deinit(void);
+    int                                                     releaseAll(void);
+    data_item_t                                             get(void);
+    int                                                     release(data_item_t* item);
 protected:
-    DataLinkedList												unused_Queue;
-    DataLinkedList                                              used_Queue;
+    DataLinkedList                                          unused_Queue;
+    DataLinkedList                                          used_Queue;
 };
 #endif

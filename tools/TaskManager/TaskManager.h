@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 // INCLUDE
 #include "../EventManager/EventManager.h"
+#include <thread>
 /////////////////////////////////////////////////
 // PREPROCESSOR
 
@@ -57,17 +58,17 @@ class TaskManager
 public:
     TaskManager();
     virtual ~TaskManager();
-    task_state_t				taskState();
-    bool						isTaskValid();
-    bool						isTaskStopped();
-    bool						isTaskReady();
-    EventManager* eventManager();
-    int							init(event_count_t eventCount, event_size_t eventSz);
-    virtual void				deinit();
-    int							startTask(int32_t prepWaitMs);
-    void						stopTask();
-    int							startTaskOp(void);
-    int							notifyTask(event_id_t eventId, event_item_t* eventData);
+    task_state_t                taskState();
+    bool					    isTaskValid();
+    bool					    isTaskStopped();
+    bool					    isTaskReady();
+    EventManager*               eventManager();
+    int                         init(event_count_t eventCount, event_size_t eventSz);
+    virtual void			    deinit();
+    int						    startTask(int32_t prepWaitMs);
+    void					    stopTask();
+    int						    startTaskOp(void);
+    int						    notifyTask(event_id_t eventId, event_item_t* eventData);
     int                         notifyTask(event_id_t eventId);
 
 protected:
@@ -76,7 +77,7 @@ protected:
     virtual void                proc(void) = 0;
 
 protected:
-    std::thread* task_Hdl;
+    std::thread*                task_Hdl;
     task_state_t				task_State;
     EventManager				event_Mgr;
 };

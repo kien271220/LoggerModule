@@ -2,6 +2,7 @@
 // INCLUDE
 #include "DataManager.h"
 #include <iostream>
+#include <cstring>
 /////////////////////////////////////////////////
 // PREPROCESSOR
 

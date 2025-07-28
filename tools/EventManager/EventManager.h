@@ -97,7 +97,7 @@ public:
     int                         notify(event_id_t eventId, event_size_t eventSize, unsigned char* eventData);
 
 protected:
-    std::mutex			event_Key;
+    std::mutex			        event_Key;
     std::condition_variable     event_Locker;
 };
 #endif
